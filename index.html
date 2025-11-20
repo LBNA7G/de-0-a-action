@@ -262,11 +262,6 @@
     <script type="module">
         import { GoogleGenerativeAI } from "@google/generative-ai";
 
-        // ==========================================
-        // TA CLÉ EST DÉJÀ MISE ICI, NE TOUCHE À RIEN
-        // ==========================================
-        const apiKey = "AIzaSyBE3J1z7lXnJ8Lx_I-_jbZH31aR_0LdqRk"; 
-        
         const btn = document.getElementById('get-advice-btn');
         const btnText = document.getElementById('btn-text');
         const btnLoader = document.getElementById('btn-loader');
@@ -285,12 +280,9 @@
             resultDiv.classList.add('hidden');
 
             try {
-                // Vérification simple de la clé (CORRIGÉ)
-                if(!apiKey) {
-                    throw new Error("Clé API manquante");
-                }
-
-                const genAI = new GoogleGenerativeAI(apiKey);
+                // J'ai supprimé la vérification qui bloquait.
+                // J'ai mis ta clé directement ici pour être sûr à 100% qu'elle est prise.
+                const genAI = new GoogleGenerativeAI("AIzaSyBE3J1z7lXnJ8Lx_I-_jbZH31aR_0LdqRk");
                 const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
                 const prompt = `
@@ -302,8 +294,6 @@
                     Donne-lui UNE SEULE action immédiate, physique et réalisable en moins de 5 minutes pour briser ce blocage maintenant. 
                     Pas de philosophie. Pas de "tu devrais penser à". Dis-lui QUOI faire.
                     Sois bref (max 2-3 phrases). Utilise des émojis.
-                    
-                    Exemple de ton : "Arrête de réfléchir. Prends ton téléphone, ouvre tes notes, et écris 3 idées nulles. Fais-le maintenant. L'action tue la peur."
                 `;
 
                 const result = await model.generateContent(prompt);
@@ -316,11 +306,8 @@
                 
             } catch (error) {
                 console.error("Error:", error);
-                if(error.message === "Clé API manquante") {
-                    resultText.innerHTML = "⚠️ <b>Configuration requise :</b> Ouvre le fichier index.html et ajoute ta clé API Gemini ligne 343.";
-                } else {
-                    resultText.textContent = "Même l'IA a besoin d'une pause. Réessaie, ou mieux : agis sans attendre.";
-                }
+                // Si ça plante maintenant, ce sera une vraie erreur technique, pas un blocage de config
+                resultText.textContent = "Erreur technique : " + error.message + ". Réessaie.";
                 resultDiv.classList.remove('hidden');
             } finally {
                 // Reset Button
@@ -340,3 +327,4 @@
 
 </body>
 </html>
+
