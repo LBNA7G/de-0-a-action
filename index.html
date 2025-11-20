@@ -1,18 +1,3 @@
-C'est normal. Je viens de vérifier le fichier que tu as envoyé et il y a encore une **erreur de syntaxe** (il manque une parenthèse) qui empêche tout le bouton de fonctionner.
-
-Comme il y a une erreur dans le code, le navigateur "bloque" tout le script, et donc quand tu cliques, **rien ne se passe**. C'est comme si le bouton était débranché.
-
-Pour régler ça définitivement et arrêter de faire des copier-coller qui risquent de casser le code, je t'ai refait le **FICHIER ENTIER**.
-
-### 🛠️ LA SOLUTION FINALE (100% Fonctionnelle)
-
-1.  Ouvre ton fichier `index.html`.
-2.  **Supprime TOUT** ce qu'il y a dedans (Ctrl+A puis Suppr).
-3.  **Copie et colle** le code complet ci-dessous. C'est la version propre, corrigée, avec ta photo et ta clé déjà intégrées.
-
-<!-- end list -->
-
-```html
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
 <head>
@@ -297,7 +282,8 @@ Pour régler ça définitivement et arrêter de faire des copier-coller qui risq
             try {
                 // Clé API intégrée directement pour éviter tout blocage
                 const genAI = new GoogleGenerativeAI("AIzaSyBE3J1z7lXnJ8Lx_I-_jbZH31aR_0LdqRk");
-                const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+                // MODIFICATION ICI : Utilisation du modèle 'gemini-1.5-flash' car 'gemini-pro' est obsolète
+                const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
                 const prompt = `
                     Tu es Loris, un entrepreneur de 23 ans, auteur du guide "De 0 à Action". 
@@ -340,4 +326,3 @@ Pour régler ça définitivement et arrêter de faire des copier-coller qui risq
 
 </body>
 </html>
-```
