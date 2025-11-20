@@ -263,7 +263,7 @@
         import { GoogleGenerativeAI } from "@google/generative-ai";
 
         // ==========================================
-        // ⚠️ IMPORTANT : COLLE TA CLÉ API GEMINI ICI
+        // TA CLÉ EST DÉJÀ MISE ICI, NE TOUCHE À RIEN
         // ==========================================
         const apiKey = "AIzaSyBE3J1z7lXnJ8Lx_I-_jbZH31aR_0LdqRk"; 
         
@@ -285,7 +285,7 @@
             resultDiv.classList.add('hidden');
 
             try {
-                // Check API Key
+                // Vérification simple de la clé (CORRIGÉ)
                 if(!apiKey) {
                     throw new Error("Clé API manquante");
                 }
@@ -339,7 +339,4 @@
     </script>
 
 </body>
-
 </html>
-
-
