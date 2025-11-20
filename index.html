@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De 0 à Action - Le Guide | Loris</title>
+    <meta name="description" content="Le guide des 23 décisions pour arrêter de rêver et commencer à construire ta liberté.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4AF37', // Or
+                        primaryHover: '#B5952F',
+                        dark: '#050505',
+                        card: '#121212',
+                        light: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        heading: ['Bebas Neue', 'sans-serif'],
+                        subheading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #F5F5F5;
+        }
+        .cta-shadow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+        }
+        .cta-shadow:hover {
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.4);
+        }
+        /* Spinner */
+        .loader {
+            border: 3px solid #1A1A1A;
+            border-top: 3px solid #D4AF37;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body class="font-body antialiased selection:bg-primary selection:text-black">
+
+    <header class="relative px-4 py-20 md:py-32 text-center overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center opacity-20 grayscale mix-blend-overlay pointer-events-none"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark/80 to-dark pointer-events-none"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <div class="inline-block mb-6 px-4 py-1 rounded-full border border-primary/30 bg-primary/5 backdrop-blur-sm">
+                <p class="text-primary font-subheading font-bold tracking-[0.2em] uppercase text-xs md:text-sm">Pour les ambitieux de 18-30 ans</p>
+            </div>
+            
+            <h1 class="font-heading text-7xl md:text-9xl mb-4 leading-[0.9] tracking-tight">
+                DE 0 À <span class="text-primary drop-shadow-xl">ACTION</span>
+            </h1>
+            
+            <h2 class="font-subheading text-xl md:text-3xl text-gray-300 mb-8 md:mb-12 font-semibold">
+                Le Guide des 23 Décisions qui Changent Tout
+            </h2>
+            
+            <p class="text-gray-400 mb-10 md:text-lg max-w-2xl mx-auto leading-relaxed">
+                Comment j'ai arrêté de rêver et commencé à construire ma liberté. <br class="hidden md:block">
+                <span class="text-white font-bold border-b-2 border-primary">Pas de théorie. Pas de bullshit. Que de l'action.</span>
+            </p>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-md mx-auto">
+                <a href="#checkout" class="w-full bg-primary text-black font-subheading font-bold text-xl py-5 px-8 rounded-lg transform hover:-translate-y-1 transition duration-300 cta-shadow flex items-center justify-center">
+                    TÉLÉCHARGER • 17€
+                </a>
+            </div>
+            <p class="mt-4 text-xs text-gray-500 uppercase tracking-wider">Accès immédiat • PDF Téléchargeable</p>
+        </div>
+    </header>
+
+    <section class="px-4 py-12 bg-card border-y border-white/5">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="flex justify-center mb-6">
+                <div class="w-24 h-24 rounded-full bg-gray-800 border-4 border-dark p-1 ring-2 ring-primary overflow-hidden">
+                    <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Loris&backgroundColor=b6e3f4" alt="Loris" class="w-full h-full object-cover rounded-full">
+                </div>
+            </div>
+            <blockquote class="font-subheading italic text-lg md:text-xl mb-4 text-gray-200 leading-relaxed">
+                "À 23 ans, je ne suis pas millionnaire. Mais j'ai quitté l'inaction pour la construction. <br>Ce livre n'est pas une biographie, c'est mon plan de bataille."
+            </blockquote>
+            <p class="text-primary font-bold tracking-wide">— Loris (@lbna_7)</p>
+        </div>
+    </section>
+
+    <section class="px-4 py-20 bg-dark border-b border-primary/10 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto text-center relative z-10">
+            <span class="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold mb-6 tracking-wider uppercase">
+                <span>✨</span> Powered by Gemini AI
+            </span>
+            
+            <h3 class="font-heading text-5xl md:text-6xl mb-4 text-white">L'ORACLE DE L'ACTION</h3>
+            
+            <p class="text-gray-400 mb-10">
+                Tu as une excuse ? J'ai la solution. <br>
+                Dis-moi ce qui te bloque, et l'IA (entraînée sur mes principes) te donnera <br>
+                <span class="text-white font-bold">UNE micro-action brutale</span> à faire en 5 minutes.
+            </p>
+            
+            <div class="bg-card border border-white/10 rounded-2xl p-2 md:p-8 shadow-2xl backdrop-blur-sm">
+                <div class="flex flex-col md:flex-row gap-3 mb-6">
+                    <input type="text" id="user-blockage" 
+                        placeholder="Ex: Je procrastine, J'ai peur d'échouer..." 
+                        class="flex-1 bg-black/50 border border-white/10 text-white px-6 py-4 rounded-xl focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder-gray-600 font-subheading">
+                    
+                    <button id="get-advice-btn" class="bg-white text-black font-bold py-4 px-8 rounded-xl hover:bg-primary transition-colors flex items-center justify-center min-w-[180px]">
+                        <span id="btn-text">DÉTRUIRE L'EXCUSE</span>
+                        <span id="btn-loader" class="loader ml-2 hidden"></span>
+                    </button>
+                </div>
+
+                <div id="advice-result" class="hidden text-left bg-dark/80 border border-primary/30 p-6 rounded-xl relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+                    <p class="text-xs text-primary font-bold uppercase mb-3 tracking-widest flex items-center gap-2">
+                        💡 Ton Action Immédiate
+                    </p>
+                    <p id="ai-response-text" class="text-lg md:text-xl text-white font-subheading italic mb-6 leading-relaxed">
+                        </p>
+                    <div class="text-right border-t border-white/5 pt-4">
+                        <a href="#checkout" class="text-xs md:text-sm text-gray-400 hover:text-primary font-bold transition-colors inline-flex items-center gap-1">
+                            Besoin de plus ? Prends le guide complet <span class="text-lg">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4 py-20 max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div>
+            <h3 class="font-heading text-5xl mb-8 leading-none">POURQUOI <br><span class="text-primary">CE GUIDE ?</span></h3>
+            <div class="space-y-6 text-gray-300 font-light text-lg">
+                <p>Tu as l'ambition. Tu as les idées. Mais tu as aussi ce blocage.</p>
+                <p>Tu te dis "je commencerai lundi". Tu attends d'être "prêt". Tu regardes les autres réussir en te demandant ce qu'ils ont de plus que toi.</p>
+                <div class="bg-primary/10 border-l-4 border-primary p-6 rounded-r-lg">
+                    <p class="text-white font-bold font-subheading">La réponse : Ils prennent des décisions que tu repousses.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-card p-8 rounded-2xl border border-white/10 shadow-xl">
+            <div class="mb-8">
+                <h4 class="font-subheading font-bold text-xl mb-4 text-red-500 flex items-center gap-2">
+                    🚫 Ce n'est PAS pour toi si :
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-start"><span class="mr-3 text-red-500">✕</span> Tu cherches une formule magique</li>
+                    <li class="flex items-start"><span class="mr-3 text-red-500">✕</span> Tu veux de la motivation sans transpirer</li>
+                    <li class="flex items-start"><span class="mr-3 text-red-500">✕</span> Tu n'es pas prêt à sacrifier ton confort</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-subheading font-bold text-xl mb-4 text-green-500 flex items-center gap-2">
+                    ✅ C'est POUR TOI si :
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-start"><span class="mr-3 text-green-500">✔</span> Tu en as marre de ta propre inaction</li>
+                    <li class="flex items-start"><span class="mr-3 text-green-500">✔</span> Tu veux un plan concret, étape par étape</li>
+                    <li class="flex items-start"><span class="mr-3 text-green-500">✔</span> Tu veux construire ta liberté, pas l'attendre</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4 py-20 bg-card border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="font-heading text-5xl mb-16 text-center">CE QUE TU VAS <span class="text-primary">DÉCOUVRIR</span></h3>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-dark p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition duration-300 group">
+                    <div class="text-4xl mb-6 grayscale group-hover:grayscale-0 transition duration-300">🧱</div>
+                    <h4 class="font-bold text-xl mb-3 font-subheading text-white">PARTIE 1 : Les Fondations</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Comment définir TA vérité, calculer ton chiffre de liberté et devenir inemployable. Arrête de construire les rêves des autres.</p>
+                </div>
+                
+                <div class="bg-dark p-8 rounded-2xl border border-primary/40 relative transform md:-translate-y-6 shadow-2xl shadow-primary/5">
+                    <div class="absolute top-0 right-0 bg-primary text-black text-[10px] font-bold px-2 py-1 rounded-bl-lg rounded-tr-lg">LE COEUR</div>
+                    <div class="text-4xl mb-6">⚡</div>
+                    <h4 class="font-bold text-xl mb-3 font-subheading text-white">PARTIE 2 : L'Action</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Lancer avant d'être prêt, vendre avant de créer et construire en public. Les méthodes pour passer de 0 à 1.</p>
+                </div>
+                
+                <div class="bg-dark p-8 rounded-2xl border border-white/5 hover:border-primary/50 transition duration-300 group">
+                    <div class="text-4xl mb-6 grayscale group-hover:grayscale-0 transition duration-300">📈</div>
+                    <h4 class="font-bold text-xl mb-3 font-subheading text-white">PARTIE 3 : La Croissance</h4>
+                    <p class="text-sm text-gray-400 leading-relaxed">Investir en soi, s'entourer de bâtisseurs et penser en décennies tout en agissant en jours.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-dark border border-primary/20 p-8 rounded-2xl text-center max-w-3xl mx-auto relative overflow-hidden">
+                <div class="absolute inset-0 bg-primary/5"></div>
+                <h4 class="font-heading text-3xl mb-2 text-primary relative z-10">🎁 BONUS INCLUS</h4>
+                <p class="text-white font-bold text-lg mb-2 relative z-10">Ton Plan d'Action 90 Jours + Liste des Outils Essentiels</p>
+                <p class="text-sm text-gray-500 relative z-10">Tu ne lis pas juste un livre. Tu suis un programme.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="checkout" class="px-4 py-24 text-center relative">
+        <div class="max-w-lg mx-auto bg-gradient-to-b from-gray-900 to-black border border-gray-800 p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+            <div class="absolute top-5 -right-12 bg-primary text-black text-xs font-bold px-12 py-2 rotate-45 shadow-lg">LANCEMENT</div>
+            
+            <h3 class="font-heading text-7xl mb-2 text-white">17€</h3>
+            <p class="text-gray-400 mb-10 text-sm">Moins cher qu'une soirée que tu oublieras demain.</p>
+            
+            <ul class="text-left space-y-4 mb-10 text-gray-300 max-w-xs mx-auto">
+                <li class="flex items-center"><svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> L'Ebook Complet (PDF)</li>
+                <li class="flex items-center"><svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Plan d'Action 90 Jours</li>
+                <li class="flex items-center"><svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Accès Communauté Privée</li>
+                <li class="flex items-center"><svg class="w-5 h-5 text-primary mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Mises à jour à vie</li>
+            </ul>
+
+            <a href="https://buy.stripe.com/6oU5kDd5e6Hz2wRc1P9Zm00" class="block w-full bg-primary text-black font-subheading font-bold text-xl py-5 rounded-xl hover:bg-white transition duration-300 mb-6 cta-shadow">
+                JE PASSE À L'ACTION
+            </a>
+            
+            <div class="flex items-center justify-center gap-2 text-xs text-gray-600">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <span>Paiement sécurisé par Stripe. Satisfait ou remboursé.</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="px-4 py-10 text-center text-gray-700 text-sm bg-black border-t border-white/5">
+        <p class="mb-2">© 2025 Loris | Tous droits réservés.</p>
+        <p class="opacity-50">Ce site ne fait pas partie du site web Facebook ou de Facebook Inc.</p>
+    </footer>
+
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+
+        // ==========================================
+        // ⚠️ IMPORTANT : COLLE TA CLÉ API GEMINI ICI
+        // ==========================================
+        const apiKey = "AIzaSyBE3J1z7lXnJ8Lx_I-_jbZH31aR_0LdqRk"; 
+        
+        const btn = document.getElementById('get-advice-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnLoader = document.getElementById('btn-loader');
+        const input = document.getElementById('user-blockage');
+        const resultDiv = document.getElementById('advice-result');
+        const resultText = document.getElementById('ai-response-text');
+
+        btn.addEventListener('click', async () => {
+            const blockage = input.value.trim();
+            if (!blockage) return;
+
+            // UI Loading State
+            btn.disabled = true;
+            btnText.textContent = "ANALYSE...";
+            btnLoader.classList.remove('hidden');
+            resultDiv.classList.add('hidden');
+
+            try {
+                // Check API Key
+                if(!apiKey || apiKey === "AIzaSyBE3J1z7lXnJ8Lx_I-_jbZH31aR_0LdqRk") {
+                    throw new Error("Clé API manquante");
+                }
+
+                const genAI = new GoogleGenerativeAI(apiKey);
+                const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+                const prompt = `
+                    Tu es Loris, un entrepreneur de 23 ans, auteur du guide "De 0 à Action". 
+                    Ton style est : direct, percutant, "tough love", sans jargon corporatif, et orienté action pure. Tu tutoies.
+                    
+                    L'utilisateur a ce blocage : "${blockage}".
+                    
+                    Donne-lui UNE SEULE action immédiate, physique et réalisable en moins de 5 minutes pour briser ce blocage maintenant. 
+                    Pas de philosophie. Pas de "tu devrais penser à". Dis-lui QUOI faire.
+                    Sois bref (max 2-3 phrases). Utilise des émojis.
+                    
+                    Exemple de ton : "Arrête de réfléchir. Prends ton téléphone, ouvre tes notes, et écris 3 idées nulles. Fais-le maintenant. L'action tue la peur."
+                `;
+
+                const result = await model.generateContent(prompt);
+                const response = await result.response;
+                const text = response.text();
+
+                // UI Success State
+                resultText.textContent = text;
+                resultDiv.classList.remove('hidden');
+                
+            } catch (error) {
+                console.error("Error:", error);
+                if(error.message === "Clé API manquante") {
+                    resultText.innerHTML = "⚠️ <b>Configuration requise :</b> Ouvre le fichier index.html et ajoute ta clé API Gemini ligne 343.";
+                } else {
+                    resultText.textContent = "Même l'IA a besoin d'une pause. Réessaie, ou mieux : agis sans attendre.";
+                }
+                resultDiv.classList.remove('hidden');
+            } finally {
+                // Reset Button
+                btn.disabled = false;
+                btnText.textContent = "DÉTRUIRE L'EXCUSE";
+                btnLoader.classList.add('hidden');
+            }
+        });
+
+        // Allow Enter key to trigger
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                btn.click();
+            }
+        });
+    </script>
+
+</body>
+</html>
