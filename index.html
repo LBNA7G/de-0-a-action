@@ -280,10 +280,14 @@
             resultDiv.classList.add('hidden');
 
             try {
-                // Clé API intégrée directement pour éviter tout blocage
-                const genAI = new GoogleGenerativeAI("AIzaSyBE3J1z7lXnJ8Lx_I-_jbZH31aR_0LdqRk");
-                // MODIFICATION ICI : Utilisation du modèle 'gemini-1.5-flash' car 'gemini-pro' est obsolète
-                const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+                // C'est ICI que j'ai mis le bon modèle : gemini-2.5-flash
+                const apiKey = "AIzaSyBE3J1z7lXnJ8Lx_I-_jbZH31aR_0LdqRk"; 
+                
+                if(!apiKey) throw new Error("Clé API manquante");
+
+                const genAI = new GoogleGenerativeAI(apiKey);
+                // MISE À JOUR MAJEURE : Le modèle qui fonctionne en 2025
+                const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
                 const prompt = `
                     Tu es Loris, un entrepreneur de 23 ans, auteur du guide "De 0 à Action". 
@@ -306,7 +310,7 @@
                 
             } catch (error) {
                 console.error("Error:", error);
-                resultText.textContent = "Erreur technique : " + error.message + ". Réessaie.";
+                resultText.innerHTML = "Erreur technique. Vérifie que ta nouvelle clé API est bien collée dans le fichier. <br>Erreur: " + error.message;
                 resultDiv.classList.remove('hidden');
             } finally {
                 // Reset Button
